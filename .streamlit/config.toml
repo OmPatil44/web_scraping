@@ -1,0 +1,10 @@
+[theme]
+primaryColor = "#92fbfdff"
+backgroundColor = "#bbdce7ff"
+secondaryBackgroundColor = "#d9eff9ff"
+textColor = "#262a30ff"
+font = "funnel sans"
+
+[server]
+headless = true
+port = 8501
