@@ -9,6 +9,7 @@ dependencies = [
     "crawl4ai>=0.7.8",
     "dotenv>=0.9.9",
     "feedparser>=6.0.12",
+    "google-generativeai>=0.8.6",
     "langchain>=1.2.0",
     "langchain-google-genai>=4.0.0",
     "langchain-ollama>=1.0.1",
