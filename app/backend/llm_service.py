@@ -1,10 +1,19 @@
 import json
-from typing import Dict, Type, Any
+from typing import Dict, Type, Any, Optional
+
 from pydantic import BaseModel, create_model, Field
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from models import Openrouter_LLM
-from pydantic import create_model
+
+type_map = {
+    'int' : int,
+    'float' : float,
+    'bool' : bool,
+    'str' : str,
+    'list' : list,
+    'dict' : dict
+}
 
 SYSTEM_PROMPT = """
 You are an expert data schema architect. 
@@ -35,22 +44,46 @@ def generate_json_schema(input_request : str):
 
 def map_datatype(type_str: str):
     type_str = type_str.lower().strip()
-    if 'int' in type_str:
-        return 'int'
-    elif 'float' in type_str:
-        return 'float'
-    elif 'bool' in type_str:
-        return 'bool'
-    elif 'list' in type_str:
-        return 'list'
-    else:
-        return 'str'
+    return type_map.get(type_str, str)
 
 def format_json(input_schema : Dict):
     schema = {}
     for key, value in input_schema.items():
-        schema[key] = map_datatype(value)
-
+        schema[key] = (map_datatype(value), ...)
+    
     return schema
 
-pydanticmodel = create_model(str(data))
+def get_pydantic_model(schema):
+    model = create_model("JSON_SCHEMA" , **schema)
+    return model
+
+def generate_pydantic_model(input_request : str):
+    schema = generate_json_schema(input_request)
+    if not schema or schema.strip() == "":
+        print("[Backend] Error: Empty Schema from LLM")
+
+    formatted_schema = format_json(schema)
+    pydantic_model = get_pydantic_model(formatted_schema)
+
+    return pydantic_model
+
+if __name__ == "__main__":
+    # Simulate the LLM output for testing
+    llm_output = generate_json_schema("I want to extract name , age and email address.")
+    print(f"LLM Schema : {llm_output}")
+    print("="*40)
+    formatted_schema = format_json(llm_output)
+    print(f"Formatted Schema : {formatted_schema}")
+    print("="*40)
+    pydantic_model = get_pydantic_model(formatted_schema)
+    print(f"Pydantic Schema : {pydantic_model}")
+    print("="*40)
+
+    user_data = {'name' : 'Om', 'age' : 19, 'email_address' : 'om@example.com'}
+    try:
+        instance = pydantic_model.model_validate(user_data)
+        print(instance)
+        print("Model validated successfully !")
+    except Exception as e:
+        print(f"Error : {e}")
+
