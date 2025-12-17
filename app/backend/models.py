@@ -41,6 +41,16 @@ Google_LLM = ChatGoogleGenerativeAI(
 input = "What is Langchain ?"
 
 def test(input : str, model):
+    """
+    Tests the connection to a given LLM model.
+    
+    Args:
+        input (str): The prompt message to send to the model.
+        model (BaseChatModel): The LangChain chat model instance to test.
+        
+    Returns:
+        None: Prints the model response or error message to stdout.
+    """
     if model.invoke(input).content:
         print(model.invoke(input).content)
         print("Model loaded successfully !")
