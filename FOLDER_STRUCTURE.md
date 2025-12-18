@@ -5,42 +5,39 @@ This structure is designed for modularity and clarity, separating UI code from b
 ```
 web_scraping_project/
 ├── .streamlit/
-│   └── config.toml          # Streamlit UI configuration (theme, server settings)
+│   └── config.toml                     # Streamlit UI configuration (theme, server settings)
 │
 ├── app/
 │   ├── __init__.py
 │   ├── ui/
 │   │   ├── __init__.py
-│   │   ├── sidebar.py       # Sidebar components (Model selection)
-│   │   └── widgets.py       # Reusable UI widgets (Inputs, Buttons)
+│   │   ├── sidebar.py                  # Sidebar components (Model selection)
+│   │   └── main.py                     # Main page for URL and Data Extraction
 │   │
-│   ├── backend/
-│   │   ├── __init__.py
-│   │   ├── scraper_service.py   # Logic using Crawl4AI
-│   │   ├── llm_service.py       # Logic interacting with Ollama
-│   │   └── data_service.py      # Logic for CSV formatting/saving
-│   │
-│   └── utils/
+│   └── backend/
 │       ├── __init__.py
-│       └── helpers.py       # shared helper functions
+│       ├── scraper_service.py          # Logic using Crawl4AI
+│       ├── llm_service.py              # Logic interacting with Ollama
+│       ├── data_service.py             # Logic for main pipeline
+│       ├── models.py                   # Dynamic model provider selecting
+│       └── prompts.py                  # Prompts for pydantic model and data extraction
+│     
+│     
 │
 ├── data/
-│   └── output/              # Directory where CSV files are saved
+│   └── output/                         # Directory where CSV files are saved
 │
-├── assets/                  # Images or static assets for the UI
 │
-├── main.py                  # Entry point: runs the Streamlit app
-├── requirements.txt         # Project dependencies
-├── .env                     # Environment variables (if needed)
-├── .gitignore               # Git ignore rules
-├── ROADMAP.md               # Development plan
-└── FOLDER_STRUCTURE.md      # This file
+├── testing/
+│   ├── crawler_response                # Testing for crawler response
+│   └── llm_response                    # Testing for LLM response
+│
+│
+├── pyproject.toml                      # UV Dependency Manager
+├── uv.lock                             # UV Dependency Manager   
+├── image.png                           # Expected UI
+├── .gitignore                          # Git ignore rules
+├── README.md                           # Readme file for users
+├── ROADMAP.md                          # Development plan
+└── FOLDER_STRUCTURE.md                 # Folder structure of project
 ```
-
-## Key Files Description
-
-- **`main.py`**: The orchestrator. It sets up the Streamlit page config and calls functions from `app/ui`.
-- **`app/backend/scraper_service.py`**: Contains the `Crawl4AI` implementation to fetch page content.
-- **`app/backend/llm_service.py`**: Handles the prompt engineering and connection to the local LLM (Ollama).
-- **`app/backend/data_service.py`**: Responsible for parsing LLM JSON output and writing it to CSV files.
-- **`app/ui/sidebar.py`**: Encapsulates the sidebar logic to keep `main.py` clean.
