@@ -1,0 +1,181 @@
+
+[     UTC     ] Logs for ai-webscraping.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[15:26:16] 🚀 Starting up repository: 'web_scraping', branch: 'main', main module: 'app/ui/main.py'
+[15:26:16] 🐙 Cloning repository...
+[15:26:17] 🐙 Cloning into '/mount/src/web_scraping'...
+
+[15:26:17] 🐙 Cloned repository!
+[15:26:17] 🐙 Pulling code changes from Github...
+[15:26:18] 📦 Processing dependencies...
+Using CPython 3.12.7
+Removed virtual environment at: /home/adminuser/venv/
+Creating virtual environment at: /home/adminuser/venv/
+Prepared 156 packages in 5.15s
+Installed 156 packages in 438ms
+ + aiofiles==25.1.0
+ + aiohappyeyeballs==2.6.1
+ + aiohttp==3.13.2
+ + aiosignal==1.4.0
+ + aiosqlite==0.22.0
+ + alphashape==1.3.1
+ + altair==6.0.0[2025-12-18 15:26:26.588905] 
+ + annotated-types==0.7.0
+ + anyio==4.12.0
+ + asyncio==4.0.0
+ + attrs==25.4.0
+ + beautifulsoup4==4.14.3
+ + blinker==1.9.0
+ + brotli==1.2.0
+ + cachetools==6.2.4
+ + certifi==2025.11.12
+ + cffi==2.0.0
+ + chardet==5.2.0
+ + [2025-12-18 15:26:26.589143] charset-normalizer==3.4.4
+ + click==8.3.1
+ + click-log==0.4.0
+ + crawl4ai==0.7.8
+ + cryptography==46.0.3
+ + cssselect==1.3.0
+ + distro==1.9.0
+ + dotenv==0.9.9
+ + fake-http-header==0.3.5
+ + fake-useragent==2.2.0
+ + [2025-12-18 15:26:26.589326] fastuuid==0.14.0
+ + feedparser==6.0.12
+ + filelock==3.20.1
+ + filetype==1.2.0
+ + frozenlist==1.8.0
+ + fsspec==2025.12.0
+ + gitdb==4.0.12
+ + gitpython==3.1.45
+ + google-ai-generativelanguage==0.6.15
+ + google-api-core==2.25.2
+ + google-api-python-client==2.187.0
+ + google-auth==2.45.0
+ + google-auth-httplib2==0.3.0
+ + google-genai==1.55.0
+ + google-generativeai==0.8.6
+ + googleapis-common-protos[2025-12-18 15:26:26.589755] ==1.72.0
+ + greenlet==3.3.0
+ + grpcio==1.67.1
+ + grpcio-status==1.67.1
+ + h11==0.16.0
+ + h2==4.3.0
+ + hf-xet==1.2.0
+ + hpack[2025-12-18 15:26:26.589883] ==4.1.0
+ + httpcore==1.0.9
+ + httplib2==0.31.0
+ + httpx==0.28.1
+ + huggingface-hub==1.2.3
+ + humanize==4.14.0
+ + hyperframe==6.1.0
+ + [2025-12-18 15:26:26.590032] idna==3.11
+ + importlib-metadata==8.7.0
+ + jinja2==3.1.6
+ + jiter==0.12.0
+ + joblib==1.5.3
+ + jsonpatch==1.33
+ + jsonpointer==3.0.0
+ + jsonschema==4.25.1
+ + jsonschema-specifications==2025.9.1
+ + langchain==1.2.0
+ + langchain-core==1.2.2
+ + langchain-google-genai==4.1.1
+ + langchain-ollama==1.0.1
+ +[2025-12-18 15:26:26.590336]  langchain-openai==1.1.4
+ + langgraph==1.0.5
+ + langgraph-checkpoint==3.0.1
+ + langgraph-prebuilt==1.0.5
+ + langgraph-sdk==0.3.0
+ + langsmith==0.5.0[2025-12-18 15:26:26.590517] 
+ + lark==1.3.1
+ + litellm==1.80.10
+ + lxml==5.4.0
+ + markdown-it-py==4.0.0
+ + markupsafe==3.0.3
+ + mdurl==0.1.2
+ + multidict==6.7.0
+ + narwhals==2.14.0
+ + networkx==3.6.1
+ + nltk==3.9.2
+ + numpy==2.3.5
+ + ollama==0.6.1
+ + openai[2025-12-18 15:26:26.590798] ==2.13.0
+ + orjson==3.11.5
+ + ormsgpack==1.12.1
+ + packaging==25.0
+ + pandas==2.3.3
+ + patchright==1.56.0
+ + pillow==12.0.0[2025-12-18 15:26:26.590921] 
+ + playwright==1.57.0
+ + propcache==0.4.1
+ + proto-plus==1.27.0
+ + protobuf==5.29.5
+ + psutil==7.1.3
+ + pyarrow==22.0.0
+ + pyasn1==0.6.1
+ + pyasn1-modules==0.4.2
+ + pycparser==2.23
+ + pydantic==2.12.5
+ + pydantic-core==[2025-12-18 15:26:26.591167] 2.41.5
+ + pydeck==0.9.1
+ + pyee==13.0.0
+ + pygments==2.19.2
+ + pyopenssl==25.3.0
+ [2025-12-18 15:26:26.591288] + pyparsing==3.2.5
+ + pypdf==6.4.2
+ + python-dateutil==2.9.0.post0
+ + python-dotenv==1.2.1
+ + pytz==2025.2
+ + pyyaml==6.0.3
+ [2025-12-18 15:26:26.591390] + rank-bm25==0.2.2
+ + referencing==0.37.0
+ + regex==2025.11.3
+ + requests==2.32.5
+ + requests-toolbelt==1.0.0
+ + rich==[2025-12-18 15:26:26.591531] 14.2.0
+ + rpds-py==0.30.0
+ + rsa==4.9.1
+ + rtree==1.4.1
+ + scipy==1.16.3
+ + sgmllib3k==1.0.0
+ + shapely==2.1.2
+ + shellingham==1.5.4
+ + six==[2025-12-18 15:26:26.591650] 1.17.0
+ + smmap==5.0.2
+ + sniffio==1.3.1
+ + snowballstemmer==2.2.0
+ + soupsieve==2.8
+ + streamlit==1.52.1
+ + tenacity==[2025-12-18 15:26:26.591765] 9.1.2
+ + tf-playwright-stealth==1.2.0
+ + tiktoken==0.12.0
+ + tokenizers==0.22.1
+ + toml==0.10.2
+ + tornado==6.5.4
+ +[2025-12-18 15:26:26.591872]  tqdm==4.67.1
+ + trimesh==4.10.1
+ + typer-slim==0.20.0
+ + typing-extensions==4.15.0
+ + typing-inspection==0.4.2
+ + tzdata==2025.3[2025-12-18 15:26:26.591984] 
+ + uritemplate==4.2.0
+ + urllib3==2.6.2
+ + uuid-utils==0.12.0
+ + watchdog==6.0.0
+ + websockets==15.0.1
+ + xxhash[2025-12-18 15:26:26.592089] ==3.6.0
+ + yarl==1.22.0
+ + zipp==3.23.0
+ + zstandard==0.25.0
+[15:26:26] 🐍 Python dependencies were installed from /mount/src/web_scraping/uv.lock using uv-sync.
+[15:26:26] 📦 WARN: More than one requirements file detected in the repository. Available options: uv-sync /mount/src/web_scraping/uv.lock, poetry /mount/src/web_scraping/pyproject.toml. Used: uv-sync with /mount/src/web_scraping/uv.lock
+Check if streamlit is installed
+Streamlit is already installed
+[15:26:28] 📦 Processed dependencies!
+
+
+
+/mount/src/web_scraping/app/backend/data_service.py:23: SyntaxWarning: invalid escape sequence '\d'
+  output_dir = ".\data\output"
