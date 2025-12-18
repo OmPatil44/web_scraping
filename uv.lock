@@ -3313,6 +3313,7 @@ dependencies = [
     { name = "numpy" },
     { name = "ollama" },
     { name = "pandas" },
+    { name = "playwright" },
     { name = "pypdf" },
     { name = "streamlit" },
 ]
@@ -3331,6 +3332,7 @@ requires-dist = [
     { name = "numpy", specifier = ">=2.3.5" },
     { name = "ollama", specifier = ">=0.6.1" },
     { name = "pandas", specifier = ">=2.3.3" },
+    { name = "playwright", specifier = ">=1.57.0" },
     { name = "pypdf", specifier = ">=6.4.2" },
     { name = "streamlit", specifier = ">=1.52.1" },
 ]
