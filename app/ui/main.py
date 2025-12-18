@@ -73,7 +73,8 @@ if is_valid:
                                     use_container_width=True
                                 )
                             try:
-                                st.dataframe(pd.read_csv(output_file).head()) 
+                                content = pd.DataFrame(result)
+                                st.dataframe(content) 
                             except Exception as e:
                                 st.warning(f"Could not preview CSV: {e}")
                 except Exception as e:
