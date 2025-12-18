@@ -1,13 +1,25 @@
-product_name,current_price,original_price,discount_percentage,rating,review_count
-"Nayajaisa ProBook 430 G5 13.3inch FHD Laptop Intel Core i5 7200U - (8 GB/256 GB SSD/Windows 11 Pro) ProBook 430 G5 13.3"" Laptop Business Laptop","₹20,699","₹78,860",73% off,,
-Ultimus Elite Intel Core i5 10th Gen 1035G4 - (8 GB/512 GB SSD/Windows 11 Home) NU14U3INF56BN-SG Thin and Light Laptop,"₹27,990","₹45,990",39% off,3.6,(538)
-WarnerCann Hi5 pro Intel Core i5 12th Gen - (8 GB/256 GB SSD/Windows 11 Pro) Hi5 Pro Business Laptop Business Laptop,"₹29,800","₹56,000",46% off,,
-Avita E Series Intel Core i5 12th Gen 1235U - (8 GB/512 GB SSD/Windows 11 Home) AM14A2INF56F-SLF Laptop,"₹30,999","₹75,980",59% off,3,(2)
-WINGS Nuvobook V1 Aluminium Alloy Metal Body Intel Intel Core i5 11th Gen 1155G7 - (8 GB/512 GB SSD/Windows 11 Home) WL-Nuvobook V1-BLU Thin and Light Laptop,"₹34,990","₹59,999",41% off,4.1,"(2,303)"
-Thomson NEO Core Series Intel Core i5 12th Gen 1235U - (16 GB/512 GB SSD/Windows 11 Home) IN-N15I Thin and Light Laptop,"₹35,990","₹59,990",40% off,4,(174)
-Acer One Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) AO 14 Z 8-415 Thin and Light Laptop,"₹24,999","₹43,999",43% off,4.2,"(13,486)"
-Avita Liber E Intel Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) AM15A2INT56F-CHF Thin and Light Laptop,"₹24,999","₹59,980",58% off,3.3,(31)
-Avita E Series Intel Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) AM15A2INT56F-SLF Laptop,"₹24,999","₹49,990",49% off,2.3,(4)
-ASUS VivoBook 15 Intel Core i3 10th Gen 1005G1 - (8 GB/512 GB SSD/Windows 11 Home) X515JA-BQ322WS Thin and Light Laptop,"₹27,990","₹50,990",45% off,4.3,"(12,787)"
-ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/256 GB SSD/Windows 11 Home) X515EA-EJ312W Thin and Light Laptop,"₹28,990","₹44,990",35% off,4.3,"(3,446)"
-Thomson NEO Core Series Intel Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) IN-N15I Thin and Light Laptop,"₹24,999","₹49,990",49% off,,
+product_name,current_price,original_price,discount_percentage,rating,specifications
+"OPPO K13x 5G 6000mAh and 45W SUPERVOOC Charger & AI (Midnight Violet, 128 GB)","₹12,499","₹15,999",21%,4.4,4 GB RAM | 128 GB ROM | Expandable Upto 2 TB | 16.94 cm (6.67 inch) HD+ Display | 50MP + 2MP | 8MP Front Camera | 6000 mAh Battery | Dimensity 6300 Processor
+"Samsung Galaxy F06 5G (Bahama Blue, 128 GB)","₹11,499","₹16,999",32%,4.2,6 GB RAM | 128 GB ROM | Expandable Upto 1500 GB | 17.02 cm (6.7 inch) HD+ Display | 50MP + 2MP | 8MP Front Camera | 5000 mAh Battery | Dimensity 6300 Processor
+"Samsung Galaxy S24 5G Snapdragon (Marble Gray, 128 GB)","₹46,999","₹74,999",37%,4.6,8 GB RAM | 128 GB ROM | 15.75 cm (6.2 inch) Full HD+ Display | 50MP + 12MP | 12MP Front Camera | 4000 mAh Battery | 8 Gen 3 Processor
+"MOTOROLA g57 power 5G (Pantone Regatta, 128 GB)","₹14,999","₹17,999",16%,4.5,8 GB RAM | 128 GB ROM | 17.07 cm (6.72 inch) Full HD+ Display | 50MP + 8MP | 8MP Front Camera | 7000 mAh Battery | 6s Gen 4 Processor
+"MOTOROLA Edge 60 Fusion 5G (PANTONE Slipstream, 256 GB)","₹22,999","₹25,999",11%,4.4,8 GB RAM | 256 GB ROM | Expandable Upto 1 TB | 16.94 cm (6.67 inch) Display | 50MP + 13MP | 32MP Front Camera | 5500 mAh Battery | Dimensity 7400 Processor
+"Samsung Galaxy F06 5G (Lit Violet, 128 GB)","₹9,999","₹13,999",28%,4.2,4 GB RAM | 128 GB ROM | Expandable Upto 1500 GB | 17.02 cm (6.7 inch) HD+ Display | 50MP + 2MP | 8MP Front Camera | 5000 mAh Battery | Dimensity 6300 Processor
+"MOTOROLA G96 5G (Pantone Ashleigh Blue, 256 GB)","₹19,999","₹22,999",13%,4.4,8 GB RAM | 256 GB ROM | 16.94 cm (6.67 inch) Full HD+ Display | 50MP + 8MP | 32MP Front Camera | 5500 mAh Battery | 7s Gen 2 Processor
+"Motorola G85 5G (Olive Green, 128 GB)","₹16,999","₹20,999",19%,4.4,8 GB RAM | 128 GB ROM | 16.94 cm (6.67 inch) Full HD+ Display | 50MP + 8MP | 32MP Front Camera | 5000 mAh Battery | 6s Gen 3 Processor
+"Samsung Galaxy S24 FE 5G (Mint, 256 GB)","₹45,999","₹65,999",30%,4.5,8 GB RAM | 256 GB ROM | 17.02 cm (6.7 inch) Full HD+ Display | 50MP + 12MP | 10MP Front Camera | 4700 mAh Battery | Exynos 2400e Processor
+"MOTOROLA Edge 60 Fusion 5G (PANTONE Amazonite, 256 GB)","₹22,999","₹25,999",11%,4.4,8 GB RAM | 256 GB ROM | Expandable Upto 1 TB | 16.94 cm (6.67 inch) Display | 50MP + 13MP | 32MP Front Camera | 5500 mAh Battery | Dimensity 7400 Processor
+"Samsung Galaxy F36 5G (Red, 128 GB)","₹17,499","₹22,999",23%,4.3,6 GB RAM | 128 GB ROM | Expandable Upto 2 TB | 17.02 cm (6.7 inch) Full HD+ Display | 50MP + 8MP + 2MP | 13MP Front Camera | 5000 mAh Battery | Samsung Exynos 1380 Processor
+"Samsung S25 Ultra 5G (Titanium Silver Blue, 256 GB)","₹1,19,999","₹1,29,999",7%,4.6,12 GB RAM | 256 GB ROM | 17.53 cm (6.9 inch) Quad HD+ Display | 200MP + 50MP | 5000 mAh Battery
+"MOTOROLA g35 5G (Leaf Green, 128 GB)","₹9,999","₹12,499",20%,4.2,4 GB RAM | 128 GB ROM | Expandable Upto 1 TB | 17.07 cm (6.72 inch) Full HD+ Display | 50MP + 8MP | 16MP Front Camera | 5000 mAh Battery | T760 Processor
+"MOTOROLA g57 power 5G (Pantone Fluidity, 128 GB)","₹14,999","₹17,999",16%,4.5,8 GB RAM | 128 GB ROM | 17.07 cm (6.72 inch) Full HD+ Display | 50MP + 8MP | 8MP Front Camera | 7000 mAh Battery | 6s Gen 4 Processor
+"Samsung Galaxy A35 5G (Awesome Navy, 128 GB)","₹19,999","₹33,999",41%,4.4,8 GB RAM | 128 GB ROM | Expandable Upto 1 TB | 16.76 cm (6.6 inch) Full HD+ Display | 50MP + 8MP + 5MP | 13MP Front Camera | 5000 mAh Battery | Samsung Exynos 1380 Processor
+"MOTOROLA g57 power 5G (Pantone Corsair, 128 GB)","₹14,999","₹17,999",16%,4.5,8 GB RAM | 128 GB ROM | 17.07 cm (6.72 inch) Full HD+ Display | 50MP + 8MP | 8MP Front Camera | 7000 mAh Battery | 6s Gen 4 Processor
+"Samsung Galaxy S24 5G Snapdragon (Onyx Black, 256 GB)","₹51,999","₹79,999",35%,4.6,8 GB RAM | 256 GB ROM | 15.75 cm (6.2 inch) Full HD+ Display | 50MP + 12MP | 12MP Front Camera | 4000 mAh Battery | 8 Gen 3 Processor
+"Samsung Galaxy S25 FE 5G (White, 512 GB)","₹77,999",,,4.6,8 GB RAM | 512 GB ROM | 17.02 cm (6.7 inch) Full HD+ Display | 50MP + 12MP + 8MP | 12MP Front Camera | 4900 mAh Li-ion Battery | Exynos 2400 Processor
+"Motorola Edge 50 Fusion (Forest Green, 128 GB)","₹17,999","₹25,999",30%,4.4,8 GB RAM | 128 GB ROM | 17.02 cm (6.7 inch) Full HD+ Display | 50MP + 13MP | 32MP Front Camera | 5000 mAh Battery | 7s Gen 2 Processor
+"MOTOROLA g05 (Forest Green, 64 GB)","₹7,299","₹9,999",27%,4.2,4 GB RAM | 64 GB ROM | Expandable Upto 1 TB | 16.94 cm (6.67 inch) HD+ Display | 50MP Rear Camera | 8MP Front Camera | 5100 mAh Battery | Helio G81 Processor
+"Samsung Galaxy Z Fold7 5G (Silver Shadow, 256 GB)","₹1,74,999",,,4.5,12 GB RAM | 256 GB ROM | 20.32 cm (8 inch) QXGA+ Display | 200MP + 12MP + 10MP | 10MP Front Camera | 4400 mAh Battery | Snapdragon 8 Elite for Galaxy Processor
+"Samsung Galaxy F17 5G (Neo Black, 128 GB)","₹15,999","₹19,499",17%,4.2,6 GB RAM | 128 GB ROM | Expandable Upto 2 TB | 17.02 cm (6.7 inch) Full HD+ Display | 50MP + 5MP | 13MP Front Camera | 5000 mAh Battery | Exynos 1330 Processor
+"MOTOROLA G86 Power 5G (Pantone Spellbound, 128 GB)","₹17,999","₹19,999",10%,4.3,8 GB RAM | 128 GB ROM | Expandable Upto 1 TB | 17.02 cm (6.7 inch) Super HD Display | 50MP + 8MP | 32MP Front Camera | 6720 mAh Battery | Dimensity 7400 Processor
+"MOTOROLA g67 power 5G (Pantone Cilantro, 128 GB)",,,,4.4,8 GB RAM | 128 GB ROM | 17.02 cm (6.7 inch) Full HD+ Display | 50MP + 8MP | 32MP Front Camera | 7000 mAh Battery | 7s Gen 2 Processor
