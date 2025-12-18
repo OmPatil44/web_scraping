@@ -99,19 +99,19 @@ Contributions are welcome! Please check the templates for bug or feature reporti
 ## Project ScreenShots
 
 ### Expected UI Design
-![image](images\ui_wireframe.png)
+![image](images/ui_wireframe.png)
 
 ---
 
 ### Homepage
-![image](images\homepage.png)
+![image](images/homepage.png)
 
 ---
 
 ### Scraping
-![image](images\scraping.png)
+![image](images/scraping.png)
 
 ---
 
 ### Final Result
-![image](images\output.png)
+![image](images/output.png)
