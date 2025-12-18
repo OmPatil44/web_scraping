@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+
 from crawl4ai import *
 from crawl4ai.deep_crawling import BFSDeepCrawlStrategy
 from crawl4ai.deep_crawling import DFSDeepCrawlStrategy
@@ -50,20 +54,8 @@ crawlerConfig = CrawlerRunConfig(
 )
 
 async def scrape_url(url: str):
-    """
-    Executes the main scraping workflow using Crawl4AI.
-    
-    This function configures the browser and crawler, sends a request to the defined URL,
-    and returns the extracted markdown content.
-    
-    Args:
-        url (str): The URL to scrape.
-
-    Returns:
-        str: The extracted markdown content from the target URL, or None if scraping fails.
-    """
     try:
-        print(f"[Scraper Service] Starting scrape for: {url}")
+        print(f"[backend][Scraper Service] Starting scrape for: {url}")
         async with AsyncWebCrawler(config=browserConfig) as crawler:
             result = await crawler.arun(url, config=crawlerConfig)
             

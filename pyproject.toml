@@ -17,5 +17,6 @@ dependencies = [
     "numpy>=2.3.5",
     "ollama>=0.6.1",
     "pandas>=2.3.3",
+    "pypdf>=6.4.2",
     "streamlit>=1.52.1",
 ]

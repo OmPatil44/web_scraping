@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+
 import json
 from typing import Dict, Type, Any, Optional
 import asyncio
@@ -6,11 +10,10 @@ import re
 from pydantic import BaseModel, create_model, Field
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from models import Openrouter_LLM
-from scraper_service import scrape_url
+from app.backend.models import get_llm
+from app.backend.scraper_service import scrape_url
 
-from prompts import SCHEMA_GEN_SYSTEM_PROMPT, SCHEMA_GEN_USER_PROMPT
-from prompts import EXTRACTION_SYSTEM_PROMPT, EXTRACTION_USER_PROMPT
+from app.backend.prompts import SCHEMA_GEN_SYSTEM_PROMPT, SCHEMA_GEN_USER_PROMPT
 
 type_map = {
     'int' : int,
@@ -24,7 +27,8 @@ type_map = {
 schema_prompt = PromptTemplate.from_template(SCHEMA_GEN_SYSTEM_PROMPT + " " + SCHEMA_GEN_USER_PROMPT)
 
 def generate_json_schema(input_request : str):
-    chain = schema_prompt | Openrouter_LLM | JsonOutputParser()
+    llm = get_llm()
+    chain = schema_prompt | llm | JsonOutputParser()
     result = chain.invoke({'user_prompt' : input_request})
     return result
 
@@ -52,6 +56,7 @@ def extract_json_from_markdown(text: str) -> str:
 def generate_dynamic_pydantic_model(user_prompt: str):
     json_schema = generate_json_schema(user_prompt)
     formatted_schema = format_json(json_schema)
+    print(f"[backend] Formatted Schema : {formatted_schema}")
     return get_pydantic_model(formatted_schema)
 
 

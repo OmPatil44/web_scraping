@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+
 from langchain_ollama import ChatOllama
 from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -5,52 +9,60 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
-OPENROUTER_API_KEY= os.getenv('OPENROUTER_API_KEY')
-BASE_URL= os.getenv('BASE_URL')
-
-available_models = [
-    {'deepseek-r1:1.5b' : '1.1'},
-    {'qwen2.5:3b' : '1.9'},
-    {'qwen3:4b' : '2.5'},
-    {'mistral:7b' : '4.4'}
-]
-
-
-model = ChatOllama(
-    model='deepseek-r1:1.5b',
-    temperature=1.0,
-    base_url="http://127.0.0.1:11434"
-)
-
-Openrouter_LLM = ChatOpenAI(
-    model='xiaomi/mimo-v2-flash:free',
-    api_key=OPENROUTER_API_KEY,
-    base_url=BASE_URL,
-    temperature=1.0,
-    default_headers={
-        "HTTP-Referer": "http://localhost",   
-        "X-Title": "Web Scraping"
+def get_openrouter_llm():
+    api_key = os.getenv('OPENROUTER_API_KEY')
+    base_url = os.getenv('BASE_URL', "https://openrouter.ai/api/v1")
+    model_name = os.getenv('OPENROUTER_MODEL', 'xiaomi/mimo-v2-flash:free')
+    
+    return ChatOpenAI(
+        model=model_name,
+        api_key=api_key,
+        base_url=base_url,
+        temperature=1.0,
+        default_headers={
+            "HTTP-Referer": "http://localhost",   
+            "X-Title": "Web Scraping"
         }
-)
+    )
 
-Google_LLM = ChatGoogleGenerativeAI(
-    model='gemini-2.5-flash',
-    temperature=1.0
-)
+def get_google_llm():
+    api_key = os.getenv('GOOGLE_API_KEY')
+    model_name = os.getenv('GEMINI_MODEL', 'gemini-2.5-flash')
+    
+    return ChatGoogleGenerativeAI(
+        model=model_name,
+        google_api_key=api_key,
+        temperature=1.0
+    )
 
-input = "What is Langchain ?"
+def get_ollama_llm():
+    model_name = os.getenv('OLLAMA_MODEL', 'deepseek-r1:1.5b')
+    base_url = os.getenv('OLLAMA_BASE_URL', "http://127.0.0.1:11434")
+    
+    return ChatOllama(
+        model=model_name,
+        temperature=1.0,
+        base_url=base_url
+    )
+
+def get_llm():
+    provider = os.getenv('LLM_PROVIDER', '').lower()
+    
+    if 'openrouter' in provider:
+        return get_openrouter_llm()
+    elif 'gemini' in provider:
+        return get_google_llm()
+    elif 'ollama' in provider:
+        return get_ollama_llm()
+    else:
+        if os.getenv('OPENROUTER_API_KEY'):
+            return get_openrouter_llm()
+        elif os.getenv('GOOGLE_API_KEY'):
+            return get_google_llm()
+        else:
+            return get_ollama_llm()
 
 def test(input : str, model):
-    """
-    Tests the connection to a given LLM model.
-    
-    Args:
-        input (str): The prompt message to send to the model.
-        model (BaseChatModel): The LangChain chat model instance to test.
-        
-    Returns:
-        None: Prints the model response or error message to stdout.
-    """
     if model.invoke(input).content:
         print(model.invoke(input).content)
         print("Model loaded successfully !")
@@ -59,4 +71,4 @@ def test(input : str, model):
 
 
 if __name__ == "__main__":
-    test(input, Openrouter_LLM)
+    test("What is Langchain ?", get_llm())

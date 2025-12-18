@@ -18,20 +18,7 @@ Example Output:
 
 SCHEMA_GEN_USER_PROMPT = "User Request: {user_prompt}"
 
-EXTRACTION_SYSTEM_PROMPT = """
-You are an expert data extractor.
-Your task is to extract structured data from the provided text content based on the JSON schema:
-{schema_json}
-
-Rules:
-1. ONLY extract fields explicitly defined in the provided schema.
-2. If a field is missing in the content, return null (None).
-3. Ensure the output is a strictly valid JSON object.
-4. Do not include any explanations or markdown. Just the JSON.
-5. Do not add any starting and ending texts like ```json and ```.
-"""
-
-EXTRACTION_USER_PROMPT = "Content to extract from:\n{content}"
+EXTRACTION_USER_PROMPT = "Content to extract from:\n"
 
 DATA_EXTRACTION_AGENT_PROMPT = """
 You are a highly accurate data extraction specialist.
@@ -45,4 +32,5 @@ Rules:
 
 Output Format:
 Just output the reponse in json format. Do not any extra information and no any decorators like ```json and ```. Just pure clean JSON response.
+**VALID JSON ONLY** : Your data will be later stored into a CSV, so output only valid JSON. Return the data as a list of JSON objects (e.g., `[{"field": "value"}, {"field": "value"}]`).
 """
