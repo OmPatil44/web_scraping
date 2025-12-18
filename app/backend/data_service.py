@@ -20,7 +20,8 @@ SystemPrompt = SystemMessage(DATA_EXTRACTION_AGENT_PROMPT)
 
 def save_to_csv(data: List[Dict[str, Any]], filename: str = "extracted_data.csv"):
     try:
-        output_dir = r".\data\output"
+        # Use absolute path for robustness, or relative to current working directory in a cross-platform way
+        output_dir = os.path.join("data", "output")
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
         filepath = os.path.join(output_dir, filename)

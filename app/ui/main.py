@@ -49,17 +49,19 @@ if is_valid:
         else:
             with st.spinner("🕷️ Scraping and extracting data..."):
                 try:
+                    # Improved asyncio handling for Streamlit
                     try:
                         loop = asyncio.get_event_loop()
                     except RuntimeError:
-                        loop = asyncio.new_event_loop() # Async loop errors
+                        loop = asyncio.new_event_loop()
                         asyncio.set_event_loop(loop)
                     
+                    # Run the async function
                     result = loop.run_until_complete(execute_scraping())
                    
                     if result:
                         st.success("✅ Extraction Complete!")
-                        output_file = r"data\output\extracted_data.csv"
+                        output_file = os.path.join("data", "output", "extracted_data.csv")
                         if os.path.exists(output_file):
                             with open(output_file, 'r') as f:
                                 csv_data = f.read()
