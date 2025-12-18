@@ -4,6 +4,8 @@ import asyncio
 import streamlit as st
 import pandas as pd
 
+os.system("playwright install chromium")
+
 # for async error
 if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
